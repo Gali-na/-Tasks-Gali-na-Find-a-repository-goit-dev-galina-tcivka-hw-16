@@ -6,22 +6,22 @@ import org.junit.jupiter.params.provider.ValueSource;
 import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
-class ClientTest {
-   Client client = new Client();
+class CustomerTest {
+   Customer customer = new Customer();
 
     @BeforeEach
     void createCalculator() {
-        client = new Client();
+        customer = new Customer();
     }
 
     @Test
     void setName_NameNull_ThrowException() {
-        assertThrows(IllegalArgumentException.class, () ->  client.setName(null));
+        assertThrows(IllegalArgumentException.class, () ->  customer.setName(null));
     }
 
     @Test
     void setName_NameLessTwoSymbols_ThrowException() {
-        assertThrows(IllegalArgumentException.class, () ->  client.setName("a"));
+        assertThrows(IllegalArgumentException.class, () ->  customer.setName("a"));
     }
 
     @Test
@@ -30,12 +30,12 @@ class ClientTest {
         for(int i=0; i<=1010;i++){
             testName.append("a");
         }
-        assertThrows(IllegalArgumentException.class, () ->  client.setName(testName.toString()));
+        assertThrows(IllegalArgumentException.class, () ->  customer.setName(testName.toString()));
     }
 
     @ParameterizedTest
     @ValueSource(strings = { "Jack", "Harry", "Jacob","Charlie" })
     void setName_NameLess1000AndMoreTwoSymbols_DoesntThrowException(String name) {
-        assertDoesNotThrow(() ->  client.setName(name));
+        assertDoesNotThrow(() ->  customer.setName(name));
     }
 }
