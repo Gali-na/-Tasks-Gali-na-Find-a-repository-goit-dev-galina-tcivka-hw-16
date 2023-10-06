@@ -1,4 +1,4 @@
-name: Run JUnit Tests on Pull Request
+name: run-junit-tests
 on:
   pull_request:
     branches:
