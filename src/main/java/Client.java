@@ -5,7 +5,7 @@ import lombok.*;
 @Getter
 @Setter
 @ToString
-public class Customer {
+public class Client {
     private long id;
     private String name;
 
