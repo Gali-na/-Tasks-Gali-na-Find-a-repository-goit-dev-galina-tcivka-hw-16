@@ -1,4 +1,4 @@
-name: Run JUnit Tests on Pull Request
+name: learn-github-actions
 on:
   pull_request:
     branches:
