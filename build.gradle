@@ -10,8 +10,19 @@ repositories {
 }
 
 dependencies {
+    implementation 'com.mikemybytes:junit5-formatted-source:0.2.0'
+    implementation 'com.mikemybytes:junit5-formatted-source-tests:0.2.0'
+    implementation 'com.mikemybytes:junit5-formatted-source-parent:0.2.0'
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+
+    compileOnly 'org.projectlombok:lombok:1.18.24'
+    compileOnly 'org.projectlombok:lombok:1.18.28'
+    annotationProcessor 'org.projectlombok:lombok:1.18.28'
+    testCompileOnly 'org.projectlombok:lombok:1.18.28'
+    testAnnotationProcessor 'org.projectlombok:lombok:1.18.28'
+    testImplementation("org.junit.jupiter:junit-jupiter-api:5.8.1")
+    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.8.1")
 }
 
 test {
